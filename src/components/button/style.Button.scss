@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *;
+
+.primary {
+  background-color: $shade1;
+  color: $white;
+
+  &:focus {
+    background-color: $shade1;
+    outline: 2px solid $darkgray;
+  }
+
+  &:active {
+    background-color: $shade2;
+  }
+}
+
+.normal {
+  padding: 16px 32px;
+}
+
+.medium {
+  padding: 14px 32px;
+}
+
+.small {
+  padding: 8px 24px;
+}
