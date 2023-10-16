@@ -1,9 +1,9 @@
-import Button from "@/components/button/Button";
+import HeroSection from "@/components/home/hero/HeroSection";
 
 export default function Home() {
   return (
     <main>
-      <Button text="Label" type="primary" size="normal" />
+      <HeroSection />
     </main>
   );
 }

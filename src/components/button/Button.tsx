@@ -6,6 +6,6 @@ interface ButtonProp {
   text: string;
 }
 
-export default function Button({ type, icon, text }: ButtonProp) {
+export default function Button({ type = "primary", icon, text }: ButtonProp) {
   return <button className={`${type}`}>{text}</button>;
 }
