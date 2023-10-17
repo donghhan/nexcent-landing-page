@@ -1,3 +1,5 @@
+@use "../styles/variables/" as *;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,4 +24,40 @@ main {
 
 span {
   display: inline-block;
+}
+
+// Title for each section
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  p,
+  span {
+    color: $gray;
+    line-height: 1.75;
+  }
+
+  @include media("<lg") {
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      max-width: 400px;
+      font-size: 36px;
+    }
+  }
+
+  @include media(">=lg") {
+    max-width: 700px;
+
+    h1 {
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+  }
 }
