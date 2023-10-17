@@ -1,0 +1,85 @@
+@use "../../../styles/variables/" as *;
+
+#manage {
+  width: 100%;
+  padding: 40px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text-wrapper {
+      text-align: center;
+      margin-bottom: 30px;
+
+      .title {
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .sub-text {
+        color: $gray;
+      }
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      max-width: 300px;
+    }
+  }
+
+  @include media("<lg") {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container {
+      max-width: 500px;
+      padding: 0 20px;
+
+      .title {
+        font-size: 36px;
+      }
+
+      .sub-text {
+        font-size: 16px;
+      }
+
+      .card-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+  }
+
+  @include media(">=lg") {
+    .title {
+      max-width: 700px;
+      font-size: 44px;
+    }
+
+    .sub-text {
+      font-size: 24px;
+    }
+
+    .card-wrapper {
+      display: flex;
+      gap: 50px;
+
+      .card-title {
+        max-width: 200px;
+      }
+
+      .card-text {
+        line-height: 1.5;
+      }
+    }
+  }
+}
