@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $silver;
   padding: 100px;
 
   .container {
@@ -27,7 +26,7 @@
         .text-card {
           position: absolute;
           background-color: $silver;
-          bottom: 30px;
+
           width: 90%;
           border-radius: 8px;
           left: 50%;
@@ -66,14 +65,28 @@
         .blog-card {
           min-height: 400px;
 
-          .blog-title {
-            font-size: 20px;
-          }
+          .text-card {
+            bottom: 30px;
 
-          .blog-link {
-            font-size: 20px;
+            .blog-title {
+              font-size: 20px;
+            }
+
+            .blog-link {
+              font-size: 20px;
+            }
           }
         }
+      }
+    }
+  }
+
+  @include media(">=lg") {
+    .blog-wrapper {
+      gap: 20px;
+
+      .text-card {
+        bottom: -50px;
       }
     }
   }
