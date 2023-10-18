@@ -17,7 +17,7 @@ export default function TestimonialSection() {
             quia rem impedit accusamus voluptatem modi optio consequuntur.
             Quaerat et in nesciunt omnis natus perferendis aut?
           </p>
-          <span className="name">Tim Smith</span>
+          <span className="name">John Doe</span>
           <span className="position">
             British Dragon Boat Racing Association
           </span>
