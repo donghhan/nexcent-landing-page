@@ -1,0 +1,93 @@
+@use "../../../styles/variables/" as *;
+
+#status {
+  width: 100%;
+  min-height: 40vh;
+  background-color: $silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text-wrapper {
+      .title {
+        font-weight: 600;
+        margin-bottom: 6px;
+
+        span {
+          color: $shade1;
+        }
+      }
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+
+        .number {
+          font-weight: 600;
+        }
+
+        .identifier {
+          color: $lightgray;
+        }
+      }
+    }
+  }
+
+  @include media("<lg") {
+    .container {
+      flex-direction: column;
+      max-width: 400px;
+
+      .sub-text {
+        font-size: 20px;
+      }
+
+      .status-wrapper {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .number {
+          font-size: 28px;
+        }
+
+        .identifier {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @include media(">=lg") {
+    .container {
+      flex-direction: row;
+
+      .status-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+
+        .number {
+          font-size: 36px;
+        }
+
+        .identifier {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

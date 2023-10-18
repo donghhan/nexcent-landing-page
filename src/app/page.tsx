@@ -2,6 +2,7 @@ import HeroSection from "@/components/home/hero/HeroSection";
 import OurClientsSection from "@/components/home/clients/OurClientsSection";
 import ManageSection from "@/components/home/manage/ManageSection";
 import PixelgradeSection from "@/components/home/pixelgrade/PixelgradeSection";
+import StatusSection from "@/components/home/status/StatusSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <OurClientsSection />
       <ManageSection />
       <PixelgradeSection />
+      <StatusSection />
     </main>
   );
 }
