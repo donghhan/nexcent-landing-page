@@ -24,7 +24,7 @@ export default function OurClientsSection() {
       <div className="container">
         <div className="text-wrapper">
           <h1>Our Clients</h1>
-          <span>We have been working with some Fortuene 500+ clients</span>
+          <span>We have been working with some Fortune 500+ clients</span>
         </div>
         <div className="logo-wrapper">
           {images.map((image, index) => (

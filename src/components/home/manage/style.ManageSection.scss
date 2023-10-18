@@ -1,34 +1,54 @@
 @use "../../../styles/variables/" as *;
 
-.card {
+#manage {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  max-width: 300px;
-}
+  justify-content: center;
 
-@include media("<lg") {
-  .card-wrapper {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      max-width: 300px;
+    }
   }
-}
 
-@include media(">=lg") {
-  .card-wrapper {
-    display: flex;
-    gap: 50px;
-
-    .card-title {
-      max-width: 200px;
+  @include media("<lg") {
+    .text-wrapper {
+      margin-bottom: 50px;
     }
 
-    .card-text {
-      line-height: 1.5;
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  @include media(">=lg") {
+    .text-wrapper {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .card-wrapper {
+      display: flex;
+      gap: 50px;
+
+      .card-title {
+        max-width: 200px;
+      }
+
+      .card-text {
+        line-height: 1.5;
+      }
     }
   }
 }

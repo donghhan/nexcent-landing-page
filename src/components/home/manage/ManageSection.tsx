@@ -25,20 +25,22 @@ const cardInfo = [
 
 export default function ManageSection() {
   return (
-    <Layout
-      direction="vertical"
-      title="Manage your entire community in a single system"
-      text="Who is Nexcent suitable for?"
-    >
-      <div className="card-wrapper">
-        {cardInfo.map((info, index) => (
-          <div key={index} className="card">
-            <Image src={info.src} alt="Card Icon" />
-            <h2 className="card-title">{info.title}</h2>
-            <p className="card-text">{info.text}</p>
-          </div>
-        ))}
+    <section id="manage">
+      <div className="container">
+        <div className="text-wrapper">
+          <h1>Manage your entire community in a single system</h1>
+          <span>Who is Nexcent suitable for?</span>
+        </div>
+        <div className="card-wrapper">
+          {cardInfo.map((info, index) => (
+            <div key={index} className="card">
+              <Image src={info.src} alt="Card Icon" />
+              <h2 className="card-title">{info.title}</h2>
+              <p className="card-text">{info.text}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </Layout>
+    </section>
   );
 }
