@@ -3,6 +3,7 @@ import OurClientsSection from "@/components/home/clients/OurClientsSection";
 import ManageSection from "@/components/home/manage/ManageSection";
 import PixelgradeSection from "@/components/home/pixelgrade/PixelgradeSection";
 import StatusSection from "@/components/home/status/StatusSection";
+import TestimonialSection from "@/components/home/testimonial/TestimonialSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ManageSection />
       <PixelgradeSection />
       <StatusSection />
+      <TestimonialSection />
     </main>
   );
 }
