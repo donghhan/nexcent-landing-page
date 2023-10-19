@@ -3,7 +3,6 @@ import building from "public/images/building.svg";
 import group from "public/images/group.svg";
 import membership from "public/images/membership.svg";
 import Image from "next/image";
-import Layout from "@/components/layout/Layout";
 
 const cardInfo = [
   {
