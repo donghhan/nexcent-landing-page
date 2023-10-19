@@ -1,0 +1,76 @@
+@use "../../styles/variables/" as *;
+
+footer {
+  width: 100%;
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  padding: 65px 0;
+
+  .container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+
+      span {
+        font-size: 16px;
+        line-height: 2;
+      }
+    }
+
+    .menu-wrapper {
+      display: flex;
+
+      .company-wrapper,
+      .support-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        .menu-title {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @include media("<lg") {
+    .container {
+      flex-direction: column;
+
+      .menu-wrapper {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 50px;
+      }
+    }
+
+    .menu-title {
+      font-size: 20px;
+    }
+  }
+
+  @include media(">=lg") {
+    .container {
+      justify-content: space-evenly;
+
+      .menu-wrapper {
+        display: flex;
+        column-gap: 30px;
+
+        .menu-title {
+          font-size: 28px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}

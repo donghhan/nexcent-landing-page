@@ -18,6 +18,11 @@ button {
   cursor: pointer;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 main {
   width: 100%;
   position: relative;
