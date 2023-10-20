@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import "./style.Footer.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,7 +28,17 @@ export default function Footer() {
     register,
     handleSubmit,
     formState: { errors },
+    getValues,
   } = useForm<EmailInput>();
+
+  const subscriptionSubmit = async () => {
+    const email = getValues("email");
+    try {
+      const response = await axios.post("/api/email-subscription", { email });
+    } catch (error: any) {
+      console.log(error);
+    }
+  };
 
   return (
     <footer>
@@ -83,7 +94,7 @@ export default function Footer() {
           </ul>
           <ul className="update-wrapper">
             <span className="menu-title">Stay up to date</span>
-            <form onSubmit={handleSubmit(console.log)}>
+            <form onSubmit={handleSubmit(subscriptionSubmit)}>
               <div className="input-wrapper">
                 <input
                   type="email"

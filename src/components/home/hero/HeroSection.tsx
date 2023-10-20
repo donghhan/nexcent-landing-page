@@ -17,7 +17,7 @@ export default function HeroSection() {
           <Button type="primary" text="Register" />
         </div>
         <div className="image-wrapper">
-          <Image src={hero} alt="Hero image" />
+          <Image src={hero} alt="Hero image" priority />
         </div>
       </div>
     </section>
