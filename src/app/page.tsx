@@ -6,10 +6,12 @@ import StatusSection from "@/components/home/status/StatusSection";
 import TestimonialSection from "@/components/home/testimonial/TestimonialSection";
 import MiniBlogSection from "@/components/home/blog/MiniBlogSection";
 import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
 
 export default function Home() {
   return (
     <>
+      <Header />
       <main>
         <HeroSection />
         <OurClientsSection />
